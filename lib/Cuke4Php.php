@@ -150,7 +150,6 @@ class Cuke4Php {
                 $sData->tags = array();
                 if (array_key_exists(1, $aCommand)) {
                     $sData = $aCommand[1];
-                }
                 switch ($sAction) {
                     case 'begin_scenario':
                         return $this->beginScenario($sData->tags);
@@ -169,6 +168,7 @@ class Cuke4Php {
                     default:
                         print "Unknown Command: $sInput\n";
                         break;
+                }
                 }
                 return array('success');
                 break;
